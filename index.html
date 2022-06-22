@@ -9,11 +9,10 @@
 <body>
     <script>
         'use strict';
-        let i = 0;
-        while(i < 3) {
-            alert( `number ${i}!` );
-            i++;
-        }
+        let number;
+        do {
+            number = prompt("Введите число больше 100", 0);
+        } while (number <= 100 && number);
     </script>
 </body>
 </html>
