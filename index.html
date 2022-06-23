@@ -9,10 +9,11 @@
 <body>
     <script>
         'use strict';
-        function extractCurrencyValue(str) {
-            return +str.slice(1);
-        }
-        alert(extractCurrencyValue('$120'));
+        let styles = ['Джаз', 'Блюз'];
+        styles.push('Рок-н-ролл');
+        styles[1] = 'Классика';
+        alert(styles.shift());
+        styles.unshift('Рэп', 'Рэгги');
     </script>
 </body>
 </html>
