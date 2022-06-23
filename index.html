@@ -9,28 +9,13 @@
 <body>
     <script>
         'use strict';
-        let list = {
-            value: 1,
-            next: {
-                value: 2,
-                next: {
-                    value: 3,
-                    next: {
-                        value: 4,
-                        next: null
-                    }
-                }
-            }
-        };
-
-        function printList(list) {
-          let tmp = list;
-          while (tmp) {
-            alert(tmp.value);
-            tmp = tmp.next;
-          }
+        function sum {
+            return function(b) {
+                return a + b;   
+            };
         }
-        printList(list);
+        alert( sum(1)(2) ); 
+        alert( sum(5)(-1) );
     </script>
 </body>
 </html>
