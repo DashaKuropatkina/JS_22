@@ -9,11 +9,13 @@
 <body>
     <script>
         'use strict';
-        function getLastDayOfMonth(year, month) {
-            let date = new Date(year, month +1, 0);
-            return date.getDate();
+        function getSecondsToday() {
+            let now = new Date();
+            let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            let diff = now - today; 
+            return Math.round(diff / 1000); 
         }
-        alert(getLastDayOfMonth(2012, 1));
+        alert( getSecondsToday() );
     </script>
 </body>
 </html>
