@@ -9,10 +9,13 @@
 <body>
     <script>
         'use strict';
-        function ucFirst(str) {
-            return str[0].toUpperCase()+ str.slice(1);
-        };
-        alert( ucFirst("вася") ); 
+        function checkSpam(str) {
+            let Str = str.toLowerCase();
+            return Str.includes('viagra') || Str.includes('xxx');
+        }
+        alert( checkSpam('buy ViAgRA now') );
+        alert( checkSpam('free xxxxx') );
+        alert( checkSpam("innocent rabbit") );
     </script>
 </body>
 </html>
