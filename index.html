@@ -9,16 +9,9 @@
 <body>
     <script>
         'use strict';
-        function Accumulator(startingValue) {
-            this.value = startingValue;
-            this.read = function() {
-                this.value += +prompt('введите число', 0)
-            };
-        };
-        let accumulator = new Accumulator(1);
-        accumulator.read(); 
-        accumulator.read(); 
-        alert(accumulator.value);
+        let a = +prompt('введите число a', '');
+        let b = +prompt('введите число b', '');
+        alert(a + b);
     </script>
 </body>
 </html>
