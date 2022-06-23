@@ -9,21 +9,30 @@
 <body>
     <script>
         'use strict';
-        let users = [
-            { name: "John", age: 20, surname: "Johnson" },
-            { name: "Pete", age: 18, surname: "Peterson" },
-            { name: "Ann", age: 19, surname: "Hathaway" }
-                ];
-
-        function byField(field) {
-          return (a, b) => a[field] > b[field] ? 1 : -1;
+        function printNumbers(from, to) {
+            let current = from;                                                                 
+            let timerId = setInterval(function() {
+              alert(current);
+              if (current == to) {
+                clearInterval(timerId);
+              }
+              current++;
+            }, 1000);
         }
+        printNumbers(2, 15);
 
-        users.sort(byField('name'));
-        users.forEach(user => alert(user.name)); 
 
-        users.sort(byField('age'));
-        users.forEach(user => alert(user.name));
+        function printNumbers(from, to) {
+            let current = from;             
+            setTimeout(function go() {
+                alert(current);
+                if (current < to) {
+                  setTimeout(go, 1000);
+                }
+                current++;
+            }, 1000);
+        }
+        printNumbers(2, 15);
     </script>
 </body>
 </html>
