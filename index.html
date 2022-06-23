@@ -9,11 +9,20 @@
 <body>
     <script>
         'use strict';
-        let styles = ['Джаз', 'Блюз'];
-        styles.push('Рок-н-ролл');
-        styles[1] = 'Классика';
-        alert(styles.shift());
-        styles.unshift('Рэп', 'Рэгги');
+        function sumInput() {
+            let numbers = [];
+            while (true) {
+                let num = prompt('Введите число', 0);
+                if (num === null || num === "" || !isFinite(num)) break;
+                numbers.push(+num);
+            }
+            let sum = 0;
+            fot (let number of numbers) {
+                sum += number;
+            }
+            return sum;
+        };
+        alert(sumInput());
     </script>
 </body>
 </html>
