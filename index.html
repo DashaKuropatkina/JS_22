@@ -9,13 +9,21 @@
 <body>
     <script>
         'use strict';
-        function multiplyNumeric(obj) {
-            for (let key in obj) {
-                if (typeof obj[key] == 'number') {
-                    obj[key] *= 2;
-                }
+        let calculator = {
+            read() {
+                this.a = +prompt('введите число а', 0);
+                this.b = +prompt('введите число b', 0);
+            },
+            sum() {
+                return this.a + this.b;
+            },
+            mul() {
+                return this.a * this.b;
             }
-        }
+        };
+        calculator.read();
+        alert( calculator.sum() );
+        alert( calculator.mul() );
     </script>
 </body>
 </html>
