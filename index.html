@@ -9,12 +9,23 @@
 <body>
     <script>
         'use strict';
-        let user = { name: "John", years: 30 };
-        let {name: name, years: age, isAdmin = false} = user;
+        function topSalary(salaries) {
+            let maxSal = 0;
+            let maxName = null;
 
-        alert( name ); 
-        alert( age ); 
-        alert( isAdmin );
+            for(const [name, salary] of Object.entries(salaries)) {
+                if (maxSal < salary) {
+                    maxSal = salary;
+                    maxName = name;
+                }
+            }
+            return maxName;
+        };
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        };
     </script>
 </body>
 </html>
