@@ -9,30 +9,27 @@
 <body>
     <script>
         'use strict';
-        function printNumbers(from, to) {
-            let current = from;                                                                 
-            let timerId = setInterval(function() {
-              alert(current);
-              if (current == to) {
-                clearInterval(timerId);
-              }
-              current++;
-            }, 1000);
-        }
-        printNumbers(2, 15);
+        let head = {
+            glasses: 1
+        };
 
+        let table = {
+            pen: 3,
+            __proto__: head
+        };
 
-        function printNumbers(from, to) {
-            let current = from;             
-            setTimeout(function go() {
-                alert(current);
-                if (current < to) {
-                  setTimeout(go, 1000);
-                }
-                current++;
-            }, 1000);
-        }
-        printNumbers(2, 15);
+        let bed = {
+            sheet: 1,
+            pillow: 2,
+            __proto__: table
+        };
+
+        let pockets = {
+            money: 2000,
+            __proto__: bed
+        };
+        alert(pockets.pen);
+        alert(bed.glasses);
     </script>
 </body>
 </html>
