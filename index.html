@@ -9,14 +9,12 @@
 <body>
     <script>
         'use strict';
-        function count(obj) {
-            return Object.keys(obj).length;
-        }
-        let user = {
-            name: 'John',
-            age: 30
-        };
-        alert( count(user) );
+        let user = { name: "John", years: 30 };
+        let {name: name, years: age, isAdmin = false} = user;
+
+        alert( name ); 
+        alert( age ); 
+        alert( isAdmin );
     </script>
 </body>
 </html>
